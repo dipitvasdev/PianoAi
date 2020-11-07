@@ -1,6 +1,5 @@
 import pickle 
 from music21 import converter,instrument,note,chord,stream
-import numpy as np 
 from keras.models import load_model
 def gen_prediction(sequence_length):
     with open("notes","rb") as filepath:
