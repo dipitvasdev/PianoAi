@@ -7,7 +7,7 @@ def gen_prediction(sequence_length):
         notes=pickle.load(filepath) 
     pitchnames=sorted(set(notes))
     n_vocab=len(set(notes))
-    model=load_model("model.hdf5")
+    model=load_model("model.hdf5",compile=False)
     ele_to_int= dict((ele,num) for num,ele in enumerate(pitchnames))
     network_input_new=[]
     for i in range(len(notes)-100):
